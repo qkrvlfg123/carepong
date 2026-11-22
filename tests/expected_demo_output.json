@@ -1,0 +1,124 @@
+{
+  "keyboard": [
+    {
+      "case": "평범(normal/observe 경계)",
+      "stress_score": 62.6,
+      "prob": 0.6256,
+      "raw_prob": 0.6181,
+      "level": "observe",
+      "imputed": []
+    },
+    {
+      "case": "바쁨",
+      "stress_score": 74.1,
+      "prob": 0.7412,
+      "raw_prob": 0.9294,
+      "level": "intervene",
+      "imputed": []
+    },
+    {
+      "case": "한가",
+      "stress_score": 42.4,
+      "prob": 0.4245,
+      "raw_prob": 0.3497,
+      "level": "normal",
+      "imputed": []
+    },
+    {
+      "case": "결측(일부만)",
+      "stress_score": 65.4,
+      "prob": 0.6545,
+      "raw_prob": 0.6698,
+      "level": "intervene",
+      "imputed": [
+        "SnSpecialKeys",
+        "SnDirectionKeys",
+        "SnErrorKeys",
+        "SnShortcutKeys",
+        "SnSpaces",
+        "CharactersRatio",
+        "ErrorKeyRatio",
+        "SnMouseAct",
+        "SnRightClicked",
+        "SnDoubleClicked",
+        "SnWheel",
+        "SnDragged"
+      ]
+    },
+    {
+      "case": "활동0",
+      "stress_score": null,
+      "prob": null,
+      "raw_prob": null,
+      "level": null,
+      "imputed": []
+    }
+  ],
+  "ppg": [
+    {
+      "input": {
+        "mean_hr": 72,
+        "rmssd_ms": 42
+      },
+      "status": "ok",
+      "hrv": {
+        "mean_hr": 71.799666,
+        "rmssd": 35.976984,
+        "sdnn": 28.108022,
+        "pnn50": 20.289855
+      },
+      "judge": {
+        "score": 52,
+        "verdict": "observe",
+        "used_reference": "coldstart",
+        "model_version": "base-v5-maus-hr-60s"
+      }
+    },
+    {
+      "input": {
+        "mean_hr": 88,
+        "rmssd_ms": 22
+      },
+      "status": "ok",
+      "hrv": {
+        "mean_hr": 87.823948,
+        "rmssd": 20.084088,
+        "sdnn": 15.229709,
+        "pnn50": 2.352941
+      },
+      "judge": {
+        "score": 78,
+        "verdict": "confirm",
+        "used_reference": "coldstart",
+        "model_version": "base-v5-maus-hr-60s"
+      }
+    },
+    {
+      "input": {
+        "mean_hr": 65,
+        "rmssd_ms": 60
+      },
+      "status": "ok",
+      "hrv": {
+        "mean_hr": 64.844327,
+        "rmssd": 50.437475,
+        "sdnn": 39.47949,
+        "pnn50": 26.984127
+      },
+      "judge": {
+        "score": 37,
+        "verdict": "deny",
+        "used_reference": "coldstart",
+        "model_version": "base-v5-maus-hr-60s"
+      }
+    }
+  ],
+  "personalize": {
+    "aggregated_SnKeyStrokes": 82.0,
+    "w_n0": 0.0,
+    "w_n300": 0.5,
+    "w_n900": 0.75,
+    "z_SnKeyStrokes_n0": 4.4,
+    "z_SnKeyStrokes_n300": 1.4
+  }
+}

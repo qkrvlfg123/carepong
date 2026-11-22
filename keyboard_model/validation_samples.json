@@ -1,0 +1,164 @@
+[
+  {
+    "case": "평범(normal/observe 경계)",
+    "input": {
+      "SnKeyStrokes": 85.1,
+      "SnChars": 53.4,
+      "SnSpecialKeys": 31.6,
+      "SnDirectionKeys": 3.4,
+      "SnErrorKeys": 9.3,
+      "SnShortcutKeys": 0.8,
+      "SnSpaces": 11.1,
+      "CharactersRatio": 0.5,
+      "ErrorKeyRatio": 0.2,
+      "SnMouseAct": 15.8,
+      "SnLeftClicked": 7.1,
+      "SnRightClicked": 0.2,
+      "SnDoubleClicked": 0.4,
+      "SnWheel": 4.0,
+      "SnDragged": 2.0,
+      "SnMouseDistance": 10580.6
+    },
+    "expected": {
+      "score": 62.6,
+      "prob": 0.6256,
+      "raw_prob": 0.6181,
+      "level": "observe",
+      "imputed": [],
+      "thresholds": {
+        "report": 50,
+        "intervene": 63
+      }
+    }
+  },
+  {
+    "case": "바쁨",
+    "input": {
+      "SnKeyStrokes": 170.2,
+      "SnChars": 106.8,
+      "SnSpecialKeys": 63.2,
+      "SnDirectionKeys": 3.4,
+      "SnErrorKeys": 9.3,
+      "SnShortcutKeys": 0.8,
+      "SnSpaces": 11.1,
+      "CharactersRatio": 0.5,
+      "ErrorKeyRatio": 0.2,
+      "SnMouseAct": 31.6,
+      "SnLeftClicked": 14.2,
+      "SnRightClicked": 0.2,
+      "SnDoubleClicked": 0.4,
+      "SnWheel": 4.0,
+      "SnDragged": 2.0,
+      "SnMouseDistance": 21161.2
+    },
+    "expected": {
+      "score": 74.1,
+      "prob": 0.7412,
+      "raw_prob": 0.9294,
+      "level": "intervene",
+      "imputed": [],
+      "thresholds": {
+        "report": 50,
+        "intervene": 63
+      }
+    }
+  },
+  {
+    "case": "한가",
+    "input": {
+      "SnKeyStrokes": 34.0,
+      "SnChars": 21.4,
+      "SnSpecialKeys": 31.6,
+      "SnDirectionKeys": 3.4,
+      "SnErrorKeys": 9.3,
+      "SnShortcutKeys": 0.8,
+      "SnSpaces": 11.1,
+      "CharactersRatio": 0.5,
+      "ErrorKeyRatio": 0.2,
+      "SnMouseAct": 6.3,
+      "SnLeftClicked": 2.8,
+      "SnRightClicked": 0.2,
+      "SnDoubleClicked": 0.4,
+      "SnWheel": 4.0,
+      "SnDragged": 2.0,
+      "SnMouseDistance": 10580.6
+    },
+    "expected": {
+      "score": 42.4,
+      "prob": 0.4245,
+      "raw_prob": 0.3497,
+      "level": "normal",
+      "imputed": [],
+      "thresholds": {
+        "report": 50,
+        "intervene": 63
+      }
+    }
+  },
+  {
+    "case": "결측(일부만)",
+    "input": {
+      "SnKeyStrokes": 85,
+      "SnChars": 53,
+      "SnLeftClicked": 7,
+      "SnMouseDistance": 10580
+    },
+    "expected": {
+      "score": 65.4,
+      "prob": 0.6545,
+      "raw_prob": 0.6698,
+      "level": "intervene",
+      "imputed": [
+        "SnSpecialKeys",
+        "SnDirectionKeys",
+        "SnErrorKeys",
+        "SnShortcutKeys",
+        "SnSpaces",
+        "CharactersRatio",
+        "ErrorKeyRatio",
+        "SnMouseAct",
+        "SnRightClicked",
+        "SnDoubleClicked",
+        "SnWheel",
+        "SnDragged"
+      ],
+      "thresholds": {
+        "report": 50,
+        "intervene": 63
+      }
+    }
+  },
+  {
+    "case": "활동0",
+    "input": {
+      "SnKeyStrokes": 0,
+      "SnChars": 0,
+      "SnSpecialKeys": 0,
+      "SnDirectionKeys": 0,
+      "SnErrorKeys": 0,
+      "SnShortcutKeys": 0,
+      "SnSpaces": 0,
+      "CharactersRatio": 0,
+      "ErrorKeyRatio": 0,
+      "SnMouseAct": 0,
+      "SnLeftClicked": 0,
+      "SnRightClicked": 0,
+      "SnDoubleClicked": 0,
+      "SnWheel": 0,
+      "SnDragged": 0,
+      "SnMouseDistance": 0
+    },
+    "expected": {
+      "score": null,
+      "prob": null,
+      "raw_prob": null,
+      "level": null,
+      "imputed": [],
+      "thresholds": {
+        "report": 50,
+        "intervene": 63
+      },
+      "note": "activity-zero window (condition_score=null per spec)"
+    }
+  }
+]

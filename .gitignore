@@ -1,0 +1,28 @@
+# 데이터는 올리지 않음 (공개 데이터셋 원본과 파생 csv, 수집 데이터 전부)
+*.csv
+*.xlsx
+*.xls
+*.parquet
+data/
+raw/
+waveforms/
+measurements*
+# 비밀값
+.env
+.env.*
+*.key
+*.pem
+service_account*.json
+credentials*.json
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+dist/
+# OS, 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
