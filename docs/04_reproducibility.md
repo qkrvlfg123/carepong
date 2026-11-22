@@ -24,10 +24,12 @@ python tests/check_reproducible.py
 ### 키보드·마우스 (SWELL-KW)
 
 ```bash
+python keyboard_model/train/train_v1_model.py "<경로>/Behavioral-features - per minute.xlsx" model_v1_new.json
 python keyboard_model/eval/methodology_validation.py "<경로>/Behavioral-features - per minute.xlsx"
 ```
 
-- 출력: 보정 전후 Brier, Nested CV AUC, 사람 단위와 무작위 분할의 AUC 및 DeLong 검정.
+- `train_v1_model.py`: 사람 단위 교차검증 AUC를 출력하고 계수 JSON을 저장함. 저장소의 `model_v1.json`과 같은 키를 씀.
+- `methodology_validation.py` 출력: 보정 전후 Brier, Nested CV AUC, 사람 단위와 무작위 분할의 AUC 및 DeLong 검정.
 - 난수는 `random_state=42`로 고정함.
 - 분석 당시 기록한 값: Brier 0.217 / 0.220, Nested CV 0.628, 사람 단위 0.621, 무작위 0.657, z = -9.50.
 
@@ -56,9 +58,13 @@ python ../ppg_hrv/eval/paired_diff.py 60
 
 ## 3. 다시 계산할 수 없는 것
 
-- `model_v1.json`의 계수를 만든 학습 스크립트는 이 저장소에 없음. 계수 파일과 추론 함수만 있음.
+- `train_v1_model.py`는 학습 노트북을 스크립트로 옮긴 것임. 저장소를 정리하면서 다시 돌려 보지 못했으므로, 출력 JSON이 `model_v1.json`과 소수점까지 같은지는 확인하지 못함.
 - 활동 하한선 비교, 모델 8종 비교, 개인 편차 결합(0.693), 자가보고 라벨 대조(0.482)는 보고서에 기록한 값이며 계산 코드가 이 저장소에 없음.
-- 서비스 수집 데이터를 쓴 분석은 데이터를 공개하지 않으므로 외부에서 다시 계산할 수 없음.
+- 서비스 수집 데이터 분석(`keyboard_model/field_validation/`)은 코드만 있음. 데이터를 공개하지 않으므로 외부에서 다시 계산할 수 없음.
+  - `verify_staged_auc.py`: 30분 집계와 개인화 단계의 AUC.
+  - `02_group_comparison_rhythm.py`: 리듬 파생변수 순열검정(300회, seed 0).
+  - 그림을 그리는 스크립트는 Noto Sans CJK 글꼴 경로가 리눅스 기준으로 적혀 있음.
+  - 개인화 단계 AUC는 스냅샷 시점에 따라 0.585~0.62 범위로 기록되어 있음. README에는 2026-10-24 스냅샷 값(0.619)을 적음.
 
 ## 4. 고정한 것
 
